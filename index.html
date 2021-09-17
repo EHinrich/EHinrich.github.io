@@ -1,49 +1,129 @@
 <!DOCTYPE html>
 
-<!-- комментарий в HTML -->
-
-<!-- в первой строке мы сообщаем браузеру,
-  что это документ HTML5 -->
 
 <html lang="ru">
 
-  <head>
+<head>
     <title>Задание 1</title>
-  </head>
+</head>
 
-  <body>
+<body>
 
     <map name="newmap">
-      <area shape="circle" coords="130,80,80" alt="Изображение" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0">
+        <area shape="circle" coords="130,80,80" alt="Изображение" href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0">
     </map>
 
     <ol>
-      <li> <a href="http://example.com/">example</a></li>
-      <li><a href="https://example.com/">example https</a></li>
-      <li><a href="ftp://Folder/file.txt">FTP</a></li>
-      <li><a href="ftp://user:password@example.com/Folder/file.txt">FTP Авторизация</a></li>
-      <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0#%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D1%82%D0%B5%D1%80%D1%80%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8">Фрагмент страницы сайта</a></li>
-      <li><a href="#element_id">Ссылка на фрагмент страницы</a></li>
-      <li><a href="http://example.com/?id=56443&doc=https%3A%2F%2Fehinrich.github.io%2F">Два параметра</a></li>
-      <li><a href="http://example.com/" title="Главная страница сайта example">example title</a></li>
-      <li><a>Ссылка без href</a></li>
-      <li><a href="">example с пустым href</a></li>
-      <li><a href="http://example.com/" rel="nofollow">example запрет на следование</a></li>
-      <li><a href="http://example.com/" content="noindex">example запрет на индексацию</a></li>
-      <li>Кубанский государственный университет <a href="https://www.kubsu.ru/">(КУбГУ)</a> -- вуз с богатейшей историей</li>
-      <li><a href="https://www.kubsu.ru/"><img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png" alt="КУБГУ"></a></li>
-      <li><img usemap="#newmap" src="https://lh3.googleusercontent.com/proxy/68iwtRpt3c3CT5540l4Q_VXKB_kDD-AZ__ogPZkP1TFAbkFo8ZC_JacRWQ9Eo2HlOAA8Pzv1" alt="Северная Америка"></li>
-      <li><a href="./news.html">Относительная в текущем</a></li>
-      <li><a href="./about">Относительная в about</a></li>
-      <li><a href="../news.html">Относительная уровнем выше</a></li>
-      <li><a href="../../news.html">Относительная двумя уровнями выше</a></li>
-      <li><a href="/">Сокращенная на главную</a></li>
-      <li><a href="/news/12">Сокращенная на внутреннюю</a></li>
+        <li> <a href="http://example.com/">example</a></li>
+        <li><a href="https://example.com/">example https</a></li>
+        <li><a href="ftp://Folder/file.txt">FTP</a></li>
+        <li><a href="ftp://user:password@example.com/Folder/file.txt">FTP Авторизация</a></li>
+        <li><a href="https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%B0%D1%8F_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B0#%D0%93%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B0_%D0%B8_%D1%82%D0%B5%D1%80%D1%80%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D0%B8_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%BE%D0%B9_%D0%90%D0%BC%D0%B5%D1%80%D0%B8%D0%BA%D0%B8">Фрагмент страницы сайта</a></li>
+        <li><a href="#element_id">Ссылка на фрагмент страницы</a></li>
+        <li><a href="http://example.com/?id=56443&doc=https%3A%2F%2Fehinrich.github.io%2F">Два параметра</a></li>
+        <li><a href="http://example.com/" title="Главная страница сайта example">example title</a></li>
+        <li><a>Ссылка без href</a></li>
+        <li><a href="">example с пустым href</a></li>
+        <li><a href="http://example.com/" rel="nofollow">example запрет на следование</a></li>
+        <li><a href="http://example.com/" content="noindex">example запрет на индексацию</a></li>
+        <li>Кубанский государственный университет <a href="https://www.kubsu.ru/">(КУбГУ)</a> -- вуз с богатейшей историей</li>
+        <li><a href="https://www.kubsu.ru/"><img src="https://www.kubsu.ru/sites/all/themes/portal_kubsu/logo.png" alt="КУБГУ"></a></li>
+        <li><img usemap="#newmap" src="https://ehinrich.github.io/Map.jpg" alt="Северная Америка"></li>
+        <li><a href="./news.html">Относительная в текущем</a></li>
+        <li><a href="./about">Относительная в about</a></li>
+        <li><a href="../news.html">Относительная уровнем выше</a></li>
+        <li><a href="../../news.html">Относительная двумя уровнями выше</a></li>
+        <li><a href="/">Сокращенная на главную</a></li>
+        <li><a href="/news/12">Сокращенная на внутреннюю</a></li>
 
     </ol>
     <p id="#element_id">Фрагмент страницы</p>
 
+    <form action="/"
+          method="POST">
 
-  </body>
+        <label>
+            Имя:<br />
+            <input name="field-name-1"
+                   value="" />
+        </label><br />
+
+        <label>
+            email:<br />
+            <input name="field-email"
+                   value=""
+                   type="email" />
+        </label><br />
+
+        <label>
+            Дата рождения:<br />
+            <input name="field-date"
+                   value=""
+                   type="date" />
+        </label><br />
+
+        Пол:<br />
+        <label>
+            <input type="radio" checked="checked"
+                   name="radio-group-1" value="Значение1" />
+            Муж
+        </label>
+        <label>
+            <input type="radio"
+                   name="radio-group-1" value="Значение2" />
+            Жен
+        </label><br />
+
+        Количество конечностей:<br />
+        <label>
+            <input type="radio" checked="checked"
+                   name="radio-group-2" value="Значение1" />
+            1
+        </label>
+        <label>
+            <input type="radio"
+                   name="radio-group-2" value="Значение2" />
+            2
+        </label>
+        <label>
+            <input type="radio"
+                   name="radio-group-2" value="Значение2" />
+            3
+        </label>
+        <label>
+            <input type="radio"
+                   name="radio-group-2" value="Значение2" />
+            4
+        </label><br />
+
+        <label>
+            Сверхспособности:
+            <br />
+            <select name="field-name-4[]"
+                    multiple="multiple">
+                <option value="Значение1">Бессмертие</option>
+                <option value="Значение2" selected="selected">Прохождение сквозь стены</option>
+                <option value="Значение3" selected="selected">Левитвция</option>
+            </select>
+        </label><br />
+
+        <label>
+            Биография:<br />
+            <textarea name="field-name-2"></textarea>
+        </label><br />
+
+
+        Чекбокс:<br />
+        <label>
+            <input type="checkbox" checked="checked"
+                   name="check-1" />
+            С контрактом ознакомлен
+        </label><br />
+
+        Отправить данные:
+        <input type="submit" value="Отправить" />
+    </form>
+
+</body>
 
 </html>
