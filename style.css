@@ -28,10 +28,15 @@ table{
     margin: auto;
     background-color: rgb(188, 255, 112);
     border-color: rgb(0, 0, 0); 
+    width: 480px;
 }
 
-nav li{
-    clear: left;
+table tr.color1{
+    background-color:#00CCCC;
+}
+
+table tr.color2{
+    background-color:#55FF55;
 }
 
 #h a.active, #t a.active {
