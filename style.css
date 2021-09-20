@@ -9,18 +9,18 @@ header img {
 }
 
 
-#content, header div, footer div{
+#content1, #content2, #content3, header div, footer div{
     margin: 0 auto;
     max-width: 100%;
     vertical-align:center;
     background-color: rgb(252, 202, 64);
 }
 
-#content, #h {
+#content1, #content2, #content3, #h1, #h2 {
     max-width: 960px;
 }
 
-#t, #h {
+#t, #h2 {
     margin-top: 20px;
 }
 
@@ -39,7 +39,7 @@ table tr.color2{
     background-color:#55FF55;
 }
 
-#h a.active, #t a.active {
+#h2 a.active, #t a.active {
     color: rgb(0, 0, 0);
     font-weight: bold;
    }
