@@ -1,0 +1,41 @@
+body {
+    background-color: rgb(255, 239, 194);
+}
+
+
+header img {
+    float: left;
+    margin-right: 20px;
+}
+
+
+#content, header div, footer div{
+    margin: 0 auto;
+    max-width: 100%;
+    vertical-align:center;
+    background-color: rgb(252, 202, 64);
+}
+
+#content, #h {
+    max-width: 960px;
+}
+
+#t, #h {
+    margin-top: 20px;
+}
+
+table{
+    margin: auto;
+    background-color: rgb(188, 255, 112);
+    border-color: rgb(0, 0, 0); 
+}
+
+nav li{
+    clear: left;
+}
+
+#h a.active, #t a.active {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+   }
+
