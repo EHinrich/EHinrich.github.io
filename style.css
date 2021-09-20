@@ -10,7 +10,7 @@ header img {
 
 
 #content1, #content2, #content3, header div, footer div{
-    margin: 0 auto;
+    margin: auto;
     max-width: 100%;
     vertical-align:center;
     background-color: rgb(252, 202, 64);
