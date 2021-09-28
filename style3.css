@@ -47,7 +47,7 @@ table tr.color2{
     max-width: 100%;
 }
 
-@media (max-width: 800px){
+@media (min-width: 800px){
     main{
         display: flex ;
         flex-direction: column;
@@ -67,7 +67,7 @@ table tr.color2{
 }
 
 
-@media screen and (min-width: 800px) {
+/*@media screen and (min-width: 800px) {
     #content1, #content2, #content3, header div, footer div{
         margin: 0 auto;
         max-width: 100%;
@@ -90,6 +90,6 @@ table tr.color2{
     #h2, #t, #sect {
         display:block;
     }
-}
+}*/
 
 
