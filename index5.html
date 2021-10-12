@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="ru"></html>
+
+<head>
+    <script src="Калькулятор.js" defer></script>
+
+    <style>
+        body {
+            background-color: rgb(140, 255, 146);
+        }
+        form{
+            background-color: rgb(67, 194, 73);
+            margin: auto;
+            width: 178px;
+            padding: 20px;
+        }
+        button{
+            margin-top: 7px;
+        }
+        h1{
+            text-align:center;
+        }
+
+    </style>
+</head>
+
+<header>
+    <div>
+        <h1 class="font-weight-bold">Рассчитайте стоимость</h1>
+    </div>
+</header>
+</body>
+    
+    <div id="result"></div>
+    <div>
+        <form>
+            <label>
+                Цена товара (руб):<br />
+                <input input name="field1" type="text" />
+            </label><br />
+            <label>
+                Количество товара (шт):<br />
+                <input input name="field2" type="text" />
+            </label><br />
+        <button id="button" onclick>Расчитать</button>
+        
+        </form>
+    </div>
+    
+</body>
+
+</html>
