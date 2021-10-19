@@ -147,7 +147,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
       console.log(r.value);
     });    
   });
-  
 });
 window.addEventListener('DOMContentLoaded', function (event) {
     let s = document.getElementsByName("myselect");
