@@ -22,8 +22,6 @@ let params = {
         s[0].addEventListener("change", function(event) {
           let select = event.target;
           console.log(select.value);
-          let re = /^\s*\d+\s*$/;
-          if(re.exec(f1[0].value))
           {
             if (select.value == "1")
             {r.innerHTML=params.myselect[0]*f1[0].value;}
@@ -36,8 +34,6 @@ let params = {
               radio.addEventListener("change", function(event) {
               rad = event.target;
               console.log(rad.value);
-              if(re.exec(f1[0].value))
-              {
                 if(document.getElementById("r1").checked)
                 {
                     r.innerHTML=
@@ -56,8 +52,6 @@ let params = {
                         (params.myselect[1]+params.myradio.r3)*f1[0].value;
                     k=params.myradio.r3;
                 }
-            }
-            else {alert("Некорректный ввод");}
             });    });
             }
             if (select.value == "3")
@@ -69,7 +63,6 @@ let params = {
               checkbox.addEventListener("change", function(event) {
               ch = event.target;
               console.log(ch.value);
-              if(re.exec(f1[0].value))
               {
                 if(document.getElementById("c1").checked &&
                    document.getElementById("c2").checked
@@ -149,13 +142,9 @@ let params = {
                     r.innerHTML=(params.myselect[2])*f1[0].value;
                     t=0;
                 }
-              }
-              else alert("Некорректный ввод");
             });
           });
           }
-        }
-      else {alert("Некорректный ввод");}
         });
         return false;
     });
