@@ -22,7 +22,6 @@ let params = {
         s[0].addEventListener("change", function(event) {
           let select = event.target;
           console.log(select.value);
-          {
             if (select.value == "1")
             {r.innerHTML=params.myselect[0]*f1[0].value;}
             if (select.value == "2")
