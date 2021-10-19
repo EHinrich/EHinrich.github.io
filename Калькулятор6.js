@@ -1,4 +1,3 @@
-//<script src="Параметры.JSON" defer></script>
 let params = {
     "myselect":
         [100, 150, 200],
