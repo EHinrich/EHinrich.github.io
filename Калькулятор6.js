@@ -1,21 +1,21 @@
 let params = {
-    "myselect":
-        [100, 150, 200],
+        "mycheckbox": {
+        "check-1": 10,
+        "check-2": 20,
+        "check-3": 30
+        },
         "myradio": {
         "r1": 15,
         "r2": 10,
         "r3": 5
         },
-        "mycheckbox": {
-        "check-1": 10,
-        "check-2": 20,
-        "check-3": 30
-        }
+        "myselect":
+        [100, 150, 200]
   };
   console.log(params);
     let k=0;
     let t=0;
-    window.addEventListener('DOMContentLoaded', function (event) {
+    window.addEventListener("DOMContentLoaded", function (event) {
         let f1 = document.getElementsByName("field1");
         let r = document.getElementById("result");
         let s = document.getElementsByName("myselect");
@@ -25,106 +25,141 @@ let params = {
           let re = /^\s*\d+\s*$/;
           if(re.exec(f1[0].value))
           {
-            if (select.value == "1") 
-              r.innerHTML=params.myselect[0]*f1[0].value;
+            if (select.value == "1")
+            {r.innerHTML=params.myselect[0]*f1[0].value;}
             if (select.value == "2")
             {
               r.innerHTML=(params.myselect[1]+k)*f1[0].value;
-              let rad = document.querySelectorAll(".myradios input[type=radio]");
+              let rad =
+                  document.querySelectorAll(".myradios input[type=radio]");
               rad.forEach(function(radio) {
               radio.addEventListener("change", function(event) {
-              let rad = event.target;
+              rad = event.target;
               console.log(rad.value);
               if(re.exec(f1[0].value))
               {
-                if(document.getElementById('r1').checked)
+                if(document.getElementById("r1").checked)
                 {
-                    r.innerHTML=(params.myselect[1]+params.myradio.r1)*f1[0].value;
+                    r.innerHTML=
+                        (params.myselect[1]+params.myradio.r1)*f1[0].value;
                     k=params.myradio.r1;
                 }
-                if(document.getElementById('r2').checked)
+                if(document.getElementById("r2").checked)
                 {
-                    r.innerHTML=(params.myselect[1]+params.myradio.r2)*f1[0].value;
+                    r.innerHTML=
+                        (params.myselect[1]+params.myradio.r2)*f1[0].value;
                     k=params.myradio.r2;
                 }
-                if(document.getElementById('r3').checked)
+                if(document.getElementById("r3").checked)
                 {
-                    r.innerHTML=(params.myselect[1]+params.myradio.r3)*f1[0].value;
+                    r.innerHTML=
+                        (params.myselect[1]+params.myradio.r3)*f1[0].value;
                     k=params.myradio.r3;
                 }
             }
-            else alert("Некорректный ввод");
-            });    
-          });
+            else {alert("Некорректный ввод");}
+            });    });
             }
             if (select.value == "3")
             {
               r.innerHTML=(params.myselect[2]+t)*f1[0].value;
-              let ch = document.querySelectorAll(".mycheckbox input[type=checkbox]");
+              let ch =
+                  document.querySelectorAll(".mycheckbox input[type=checkbox]");
               ch.forEach(function(checkbox) {
               checkbox.addEventListener("change", function(event) {
-              let ch = event.target;
+              ch = event.target;
               console.log(ch.value);
               if(re.exec(f1[0].value))
               {
-                if(document.getElementById("c1").checked && document.getElementById("c2").checked && document.getElementById("c3").checked)
+                if(document.getElementById("c1").checked &&
+                   document.getElementById("c2").checked
+                   && document.getElementById("c3").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-1"]+params.mycheckbox["check-2"]+params.mycheckbox["check-3"])*f1[0].value;
-                    t=params.mycheckbox["check-1"]+params.mycheckbox["check-2"]+params.mycheckbox["check-3"];
+                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-1"]
+                                 +params.mycheckbox["check-2"]
+                                 +params.mycheckbox["check-3"])*f1[0].value;
+                    t=params.mycheckbox["check-1"]
+                        +params.mycheckbox["check-2"]
+                        +params.mycheckbox["check-3"];
                 }
 
-                if(document.getElementById("c2").checked && document.getElementById("c1").checked && !document.getElementById("c3").checked)
+                if(document.getElementById("c2").checked
+                   && document.getElementById("c1").checked
+                   && !document.getElementById("c3").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-1"]+params.mycheckbox["check-2"])*f1[0].value; 
+                    r.innerHTML=(params.myselect[2]
+                                +params.mycheckbox["check-1"]
+                                +params.mycheckbox["check-2"])*f1[0].value;
                     t=params.mycheckbox["check-1"]+params.mycheckbox["check-2"];
                 }
 
-                if(document.getElementById("c3").checked && document.getElementById("c1").checked && !document.getElementById("c2").checked)
+                if(document.getElementById("c3").checked
+                   && document.getElementById("c1").checked
+                   && !document.getElementById("c2").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-1"]+params.mycheckbox["check-3"])*f1[0].value;  
-                    t=params.mycheckbox["check-1"]+params.mycheckbox["check-3"];
+                    r.innerHTML=(params.myselect[2]
+                                 +params.mycheckbox["check-1"]
+                                 +params.mycheckbox["check-3"])*f1[0].value;
+                    t=params.mycheckbox["check-1"]
+                        +params.mycheckbox["check-3"];
                 }
 
-                if(document.getElementById("c3").checked && document.getElementById("c2").checked && !document.getElementById("c1").checked)
+                if(document.getElementById("c3").checked
+                   && document.getElementById("c2").checked
+                   && !document.getElementById("c1").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-2"]+params.mycheckbox["check-3"])*f1[0].value;  
-                    t=params.mycheckbox["check-2"]+params.mycheckbox["check-3"];
+                    r.innerHTML=(params.myselect[2]
+                                 +params.mycheckbox["check-2"]
+                                 +params.mycheckbox["check-3"])*f1[0].value;
+                    t=params.mycheckbox["check-2"]
+                        +params.mycheckbox["check-3"];
                 }
 
-                if(document.getElementById("c1").checked && !document.getElementById("c2").checked && !document.getElementById("c3").checked)
+                if(document.getElementById("c1").checked
+                   && !document.getElementById("c2").checked
+                   && !document.getElementById("c3").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-1"])*f1[0].value;  
-                    t=params.mycheckbox["check-1"]; 
+                    r.innerHTML=(params.myselect[2]
+                                 +params.mycheckbox["check-1"])*f1[0].value;
+                    t=params.mycheckbox["check-1"];
                 }
 
-                if(document.getElementById("c2").checked && !document.getElementById("c1").checked && !document.getElementById("c3").checked)
+                if(document.getElementById("c2").checked
+                   && !document.getElementById("c1").checked
+                   && !document.getElementById("c3").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-2"])*f1[0].value;  
+                    r.innerHTML=(params.myselect[2]
+                                 +params.mycheckbox["check-2"])*f1[0].value;
                     t=params.mycheckbox["check-2"];
                 }
 
-                if(document.getElementById("c3").checked && !document.getElementById("c1").checked && !document.getElementById("c2").checked)
+                if(document.getElementById("c3").checked
+                   && !document.getElementById("c1").checked
+                   && !document.getElementById("c2").checked)
                 {
-                    r.innerHTML=(params.myselect[2]+params.mycheckbox["check-3"])*f1[0].value;  
+                    r.innerHTML=(params.myselect[2]
+                                 +params.mycheckbox["check-3"])*f1[0].value;
                     t=params.mycheckbox["check-3"];
                 }
 
-                if(!document.getElementById("c3").checked && !document.getElementById("c1").checked && !document.getElementById("c2").checked)
+                if(!document.getElementById("c3").checked
+                   && !document.getElementById("c1").checked
+                   && !document.getElementById("c2").checked)
                 {
-                    r.innerHTML=(params.myselect[2])*f1[0].value;  
-                    t=0; 
+                    r.innerHTML=(params.myselect[2])*f1[0].value;
+                    t=0;
                 }
               }
               else alert("Некорректный ввод");
-            });    
+            });
           });
           }
         }
-      else alert("Некорректный ввод");
+      else {alert("Некорректный ввод");}
         });
         return false;
     });
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
   let s = document.getElementsByName("myselect");
   s[0].addEventListener("change", function(event) {
     let select = event.target;
@@ -145,10 +180,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
     radio.addEventListener("change", function(event) {
       let r = event.target;
       console.log(r.value);
-    });    
+    });
   });
 });
-window.addEventListener('DOMContentLoaded', function (event) {
+window.addEventListener("DOMContentLoaded", function (event) {
     let s = document.getElementsByName("myselect");
     s[0].addEventListener("change", function(event) {
       let select = event.target;
@@ -169,6 +204,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
       checkbox.addEventListener("change", function(event) {
         let c = event.target;
         console.log(r.value);
-      });    
+      });
     });
   });
