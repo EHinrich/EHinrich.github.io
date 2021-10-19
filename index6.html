@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html lang="ru"></html>
+
+<head>
+    <script src="Калькулятор.js" defer></script>
+
+    <style>
+        body {
+            background-color: rgb(174, 255, 149);
+        }
+        form{
+            background-color: rgb(132, 228, 87);
+            width: 250px;
+            height: 150px;
+            padding: 20px;
+ 
+            margin: auto;
+        }
+        button{
+            margin-top: 7px;
+        }
+        h1, h3{
+            text-align:center;
+        }
+        .myradios, .mycheckbox{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<header>
+    <div>
+        <h1 class="font-weight-bold">Рассчитайте стоимость</h1>
+    </div>
+</header>
+</body>
+    
+    <div>
+        <div id ="content">
+        <form>
+            <label>
+                Количество мест:<br />
+                <input class="myfield1" name="field1" type="text" />
+                </label><br /><label></label><br/>
+                Выберете тип
+                <br />
+                <select name="myselect">
+                    <option value="1">Эконом</option>
+                    <option value="2">Стандарт</option>
+                    <option value="3">Люкс</option>
+                </select>
+            </label><br />
+            <div class="myradios" id="myradios">
+                <br/>Вид на:<br/>
+                <label><input type="radio" name="myradio" id ="r1" value="r1">море</label>
+                <label><input type="radio" name="myradio" id ="r2" value="r2">горы</label>
+                <label><input type="radio" name="myradio" id ="r3" value="r3">город</label>
+              </div>  
+              <div class="mycheckbox" id="mycheckbox">
+                <br/>Дополнительные услуги:<br/>
+            <label>
+                <input type="checkbox" 
+                        name="check-1" id="c1" />
+                завтрак
+            </label>
+            <label>
+                <input type="checkbox" 
+                        name="check-2" id="c2"/>
+                уборка
+            </label>
+            <label>
+                <input type="checkbox" 
+                        name="check-3" id="c3"/>
+                доп. место
+            </label><br />
+              </div>
+        </form>
+    </div>
+    <h3 class="font-weight-bold">Результат</h3>
+        <h3 id="result"></h3>
+    </div>
+</body>
+
+</html>
